@@ -43,7 +43,7 @@ export function CommissionModal({ isOpen, onClose, initialInterest = "PROJECT: O
   const [interest, setInterest] = useState(initialInterest);
   const [gpuTier, setGpuTier] = useState("High-End Compute (RTX 5070 / 4080S Tier)");
   const [cpuTier, setCpuTier] = useState("Balanced High-End (Ryzen 9 / Core i7)");
-  const [memoryTier, setMemoryTier] = useState("64GB Titanium");
+  const [memoryTier, setMemoryTier] = useState("32GB Titanium");
   const [storageTier, setStorageTier] = useState("4TB NVMe Gen4/5");
   const [customRequests, setCustomRequests] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -55,7 +55,7 @@ export function CommissionModal({ isOpen, onClose, initialInterest = "PROJECT: O
       if (initialInterest) setInterest(initialInterest);
       setGpuTier("High-End Compute (RTX 5070 / 4080S Tier)");
       setCpuTier("Balanced High-End (Ryzen 9 / Core i7)");
-      setMemoryTier("64GB Titanium");
+      setMemoryTier("32GB Titanium");
       setStorageTier("4TB NVMe Gen4/5");
       setEmail("");
       setName("");
@@ -264,9 +264,9 @@ export function CommissionModal({ isOpen, onClose, initialInterest = "PROJECT: O
                         <OptionPills 
                           label="Memory Matrix"
                           options={[
+                            "32GB Titanium",
                             "64GB Titanium",
-                            "96GB Titanium",
-                            "128GB Titanium"
+                            "96GB Titanium"
                           ]}
                           selected={memoryTier}
                           onChange={setMemoryTier}
